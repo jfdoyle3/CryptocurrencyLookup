@@ -1,12 +1,13 @@
-def get_data():
+def get_data(cryptoSymbol):
     from requests import Request, Session
     from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
     import json
+
     ticker_url = 'https://api.nomics.com'
     endpoint = '/v1/currencies/ticker'
     parameters = {
         'key': '8381f81057e8766c11cd0109bae84864',
-        'ids': 'BTC'
+        'ids': cryptoSymbol
     }
     headers = {
         'Accepts': 'application/json'
@@ -24,6 +25,6 @@ def get_data():
     return results
 
 
-def process():
-    data = get_data()
+def process(cryptoSymbol):
+    data = get_data(cryptoSymbol)
     return data[0]

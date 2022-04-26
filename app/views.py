@@ -4,6 +4,11 @@ from app import app
 from app import process_data
 
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
-    return jsonify(process_data.process())
+    return "Welcome to CryptoSite"
+
+
+@app.route('/cryptoSymbol/<cryptoSymbol>', methods=['GET'])
+def cryptoSymbol(cryptoSymbol):
+    return jsonify(process_data.process(cryptoSymbol))
