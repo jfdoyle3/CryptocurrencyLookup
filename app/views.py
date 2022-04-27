@@ -6,7 +6,7 @@ from app import process_data
 
 @app.route('/')
 def index():
-    return "Welcome to CryptoSite"
+    return jsonify("Welcome to CryptoSite")
 
 
 @app.route('/cryptoSymbol/<cryptoSymbol>', methods=['GET'])
