@@ -1,3 +1,4 @@
-# startRepo
-2/12/2022: Repo that has my custom .gitignore
-4/20/2022: Updated: added config.js
+# Cryptocurrency Lookup
+
+
+a Python project that you can enter in a cryptocurrency symbol and get the current status of the currency from a 3rd party API
